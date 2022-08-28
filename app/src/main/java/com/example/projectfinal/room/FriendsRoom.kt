@@ -1,4 +1,4 @@
-package com.example.projectfinal.Database_Room
+package com.example.projectfinal.room
 
 import android.content.Context
 import androidx.room.Database
@@ -10,8 +10,8 @@ import androidx.room.RoomDatabase
     version = 1
 )
 
-abstract class FriendsRoom {
-    abstract fun friendsDao(): FriendsDAO
+abstract class FriendsRoom : RoomDatabase() {
+    abstract fun friendsDao(): FriendsDao
 
     companion object {
 
@@ -29,7 +29,5 @@ abstract class FriendsRoom {
             RoomDatabase::class.java,
             "FriendDatabase.db"
         ).build()
-
     }
-
 }

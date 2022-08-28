@@ -3,12 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/KHUSUS TUGAS/Crocodig/project final by me/Project Final/ProjectFinal/app/src/main/res/drawable/ic_baseline_account_box_24.xml" value="0.1365" />
+        <entry key="..\:/KHUSUS TUGAS/Crocodig/project final by me/Project Final/ProjectFinal/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1245" />
         <entry key="..\:/KHUSUS TUGAS/Crocodig/project final by me/Project Final/ProjectFinal/app/src/main/res/layout/activity_add.xml" value="0.26875" />
         <entry key="..\:/KHUSUS TUGAS/Crocodig/project final by me/Project Final/ProjectFinal/app/src/main/res/layout/activity_all_friends.xml" value="0.26875" />
         <entry key="..\:/KHUSUS TUGAS/Crocodig/project final by me/Project Final/ProjectFinal/app/src/main/res/layout/activity_detail.xml" value="0.26875" />
         <entry key="..\:/KHUSUS TUGAS/Crocodig/project final by me/Project Final/ProjectFinal/app/src/main/res/layout/activity_edit.xml" value="0.26875" />
         <entry key="..\:/KHUSUS TUGAS/Crocodig/project final by me/Project Final/ProjectFinal/app/src/main/res/layout/activity_home.xml" value="0.26875" />
-        <entry key="..\:/KHUSUS TUGAS/Crocodig/project final by me/Project Final/ProjectFinal/app/src/main/res/layout/activity_main.xml" value="0.12590579710144928" />
+        <entry key="..\:/KHUSUS TUGAS/Crocodig/project final by me/Project Final/ProjectFinal/app/src/main/res/layout/activity_introductory.xml" value="0.26875" />
+        <entry key="..\:/KHUSUS TUGAS/Crocodig/project final by me/Project Final/ProjectFinal/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/KHUSUS TUGAS/Crocodig/project final by me/Project Final/ProjectFinal/app/src/main/res/layout/item_rv_newfriends.xml" value="0.22" />
+        <entry key="..\:/KHUSUS TUGAS/Crocodig/project final by me/Project Final/ProjectFinal/app/src/main/res/menu-v26/toolbarhome.xml" value="0.22" />
+        <entry key="..\:/KHUSUS TUGAS/Crocodig/project final by me/Project Final/ProjectFinal/app/src/main/res/menu/toolbarhome.xml" value="0.25" />
       </map>
     </option>
   </component>
