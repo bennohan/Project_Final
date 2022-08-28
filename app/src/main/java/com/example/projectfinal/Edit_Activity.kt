@@ -144,8 +144,8 @@ class Edit_Activity : AppCompatActivity() {
                 val id = intent.getIntExtra("KEY_ID", 0)
 
                 CoroutineScope(Dispatchers.IO).launch {
-                    database.FriendsDAO()
-                        .editFriend(FriendData(id, editName, editSchool, editGithub, fotoProfil))
+                    database.friendsDao()
+                        .editFriend(FriendData( editName, editSchool, editGithub, fotoProfil))
                 }
 
             }

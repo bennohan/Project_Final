@@ -13,7 +13,8 @@ import kotlinx.coroutines.withContext
 
 class All_Friends_Activity : AppCompatActivity() {
 
-    private val database by lazy { FriendsRoom(this) }
+    private val database by lazy {FriendsRoom
+        (this) }
     lateinit var friendsAdapterViewAll: FriendsAdapterViewAll
     private lateinit var binding: ActivityAllFriendsBinding
 
@@ -45,9 +46,9 @@ class All_Friends_Activity : AppCompatActivity() {
                 val searchQuery = "%$query%"
 
                 CoroutineScope(Dispatchers.IO).launch {
-                    val getData = database.friendsDAO().getsearchDatabase(searchQuery)
+                    val getDataFriend = database.friendsDao().getsearchDatabase(searchQuery)
                     withContext(Dispatchers.Main) {
-                        friendsAdapterViewAll.setData(getData)
+                        friendsAdapterViewAll.setData(getDataFriend)
                     }
                 }
             }
@@ -68,7 +69,7 @@ class All_Friends_Activity : AppCompatActivity() {
 
     private fun loadData() {
         CoroutineScope(Dispatchers.IO).launch {
-            val getDataFriend = database.friendDao().getFriend()
+            val getDataFriend = database.friendsDao().getFriend()
             withContext(Dispatchers.Main) {
                 friendsAdapterViewAll.setData(getDataFriend)
             }

@@ -13,7 +13,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class Detail_Activity : AppCompatActivity() {
-    private val database by lazy { FriendsRoom(this) }
+    private val database by lazy { FriendsRoom
+        (this) }
     lateinit var friendsAdapter: FriendsAdapter
     private lateinit var binding: ActivityDetailBinding
     var idFriend = 0
@@ -49,8 +50,8 @@ class Detail_Activity : AppCompatActivity() {
 
         binding.btnDelete.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
-                database.friendDao()
-                    .deleteFriend(FriendData(intentId, "$name", "$school", "$github", "$fotoProfil"))
+                database.friendsDao()
+                    .deleteFriend(FriendData("$name", "$school", "$github", "$fotoProfil"))
             }
             finish()
         }

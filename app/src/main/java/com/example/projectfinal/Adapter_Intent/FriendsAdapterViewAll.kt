@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projectfinal.Bitmap_Converter.BitmapConverter
 import com.example.projectfinal.room.FriendData
@@ -17,7 +18,7 @@ class FriendsAdapterViewAll (
 
 ) : RecyclerView.Adapter<FriendsAdapter.FriendsViewHolder>() {
 
-    class FriendViewHolder(binding: ItemRvNewfriendsBinding) : RecyclerView.ViewHolder(binding.root)
+    class FriendsViewHolder(binding: ItemRvNewfriendsBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): FriendsAdapter.FriendsViewHolder {
         val binding = ItemRvNewfriendsBinding.inflate(
@@ -59,5 +60,6 @@ class FriendsAdapterViewAll (
         item.addAll(data)
         notifyDataSetChanged()
     }
+
 
 }

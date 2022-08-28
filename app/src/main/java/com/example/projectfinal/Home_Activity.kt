@@ -21,22 +21,23 @@ import kotlinx.coroutines.withContext
 
 class Home_Activity : AppCompatActivity() {
 
-    private val database by lazy { FriendsRoom (this) }
+    private val database by lazy {FriendsRoom(this) }
     lateinit var friendsAdapter: FriendsAdapter
     private lateinit var binding: ActivityHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.tbHome)
         setupButton()
         setupRecyclerView()
     }
     private fun setupButton() {
-        edSearch.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
+        binding.edSearch.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             android.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return true
@@ -92,10 +93,11 @@ class Home_Activity : AppCompatActivity() {
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.toolbarhome, menu)
         val search = menu?.findItem(R.id.icSearch)
         val searchView = search?.actionView as? SearchView
+
 
         searchView?.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             android.widget.SearchView.OnQueryTextListener {

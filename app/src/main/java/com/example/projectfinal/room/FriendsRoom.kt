@@ -7,27 +7,31 @@ import androidx.room.RoomDatabase
 
 @Database(
     entities = [FriendData::class],
-    version = 1
+    version = 1,
+    exportSchema = false
 )
 
-abstract class FriendsRoom : RoomDatabase() {
+abstract class FriendsRoom : RoomDatabase(), FriendsDao {
     abstract fun friendsDao(): FriendsDao
 
     companion object {
 
-        @Volatile private var instance: FriendsRoom? = null
-        private var LOCK = Any()
+        @Volatile
+        private var INSTANCE: FriendsRoom? = null
 
-        operator fun invoke(context: Context) = instance ?: synchronized(LOCK) {
-            instance?: buildDatabase(context).also {
+           fun getDatabase(context: Context): FriendsDao {
+               val tempInstance = INSTANCE
+               if (tempInstance !=null){
+                   return tempInstance
+               }
 
-            }
-        }
-
-        private fun buildDatabase(context: Context)= Room.databaseBuilder(
-            context.applicationContext,
-            RoomDatabase::class.java,
-            "FriendDatabase.db"
-        ).build()
+               synchronized(this){
+                   val instance = Room.databaseBuilder(context.applicationContext, RoomDatabase ::class.java,"FriendsRom")
+                       .fallbackToDestructiveMigration()
+                       .build() as FriendsRoom
+                   INSTANCE = instance
+                   return instance
+               }
+           }
     }
 }

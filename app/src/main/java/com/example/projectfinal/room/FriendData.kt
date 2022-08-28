@@ -5,10 +5,11 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class FriendData (
+    var name: String,
+    var school: String,
+    var github: String,
+    var photoProfile: String
+    ){
     @PrimaryKey(autoGenerate = true)
-    var id: Int = 0,
-    val name: String,
-    val school: String,
-    val github: String,
-    val photoProfile: String
-        )
+    var id: Int = 0
+}

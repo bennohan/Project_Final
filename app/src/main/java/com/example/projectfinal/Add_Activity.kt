@@ -130,8 +130,8 @@ class Add_Activity : AppCompatActivity() {
                 val id = intent.getIntExtra("KEY_ID", 0)
 
                 CoroutineScope(Dispatchers.IO).launch {
-                    database.friends
-                        .addFriend(FriendData(id, editName, editSchool, editGithub, fotoProfil))
+                    database.friendsDao()
+                        .addFriend(FriendData( editName, editSchool, editGithub, fotoProfil))
                 }
                 finish()
             }
